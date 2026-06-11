@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrameX Originals — E-Business Card</title>
+<style>
+  :root{
+    --bg:#F5F5F5; --ink:#111111; --ink2:#444444; --black:#0B0B0B;
+    --white:#FFFFFF; --lgray:#D9D9D9; --dgray:#6B7280;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    background:var(--bg);min-height:100vh;display:flex;align-items:center;
+    justify-content:center;padding:24px;
+  }
+  .card{
+    width:380px;background:var(--white);border:1px solid var(--lgray);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);overflow:hidden;position:relative;
+  }
+  .card::after{
+    content:"";position:absolute;top:-70px;right:-70px;width:180px;height:180px;
+    border-radius:50%;background:#DADADA;opacity:.55;pointer-events:none;
+  }
+  .top{padding:26px 26px 20px;position:relative}
+  .micro{font-size:9px;letter-spacing:3px;color:var(--dgray);font-weight:600;
+    display:flex;justify-content:space-between;align-items:center}
+  .rec{width:9px;height:9px;border-radius:50%;background:var(--ink);
+    animation:blink 1.6s infinite;position:relative;z-index:1}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+  h1{font-size:42px;line-height:.95;letter-spacing:-1.5px;font-weight:900;
+     color:var(--ink);margin-top:14px;position:relative;z-index:1}
+  h1 span{color:var(--ink);display:block;font-size:34px}
+  .rule{width:64px;height:3px;background:var(--ink);margin:14px 0 12px}
+  .tagline{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--ink)}
+  .tagline i{color:var(--ink);font-style:normal;padding:0 5px}
+  /* minimal lens graphic */
+  .lens{position:absolute;top:54%;right:24px;transform:translateY(-50%);
+    width:78px;height:78px;border:1.5px solid #BDBDBD;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;z-index:1}
+  .lens::before{content:"";position:absolute;width:56px;height:56px;
+    border:1.2px solid #BDBDBD;border-radius:50%}
+  .lens::after{content:"";width:32px;height:32px;border:1.2px solid #BDBDBD;
+    border-radius:50%;background:radial-gradient(circle,#BDBDBD 10%,transparent 11%)}
+  .dark{background:var(--black);color:var(--white);padding:22px 26px 26px;position:relative}
+  .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+  .actions a{
+    display:flex;align-items:center;gap:8px;justify-content:center;
+    border:1px solid #2E2E2E;color:var(--white);text-decoration:none;
+    font-size:11px;font-weight:600;letter-spacing:1.2px;padding:11px 8px;
+    transition:all .18s ease;background:transparent;
+  }
+  .actions a:hover{background:var(--white);border-color:var(--white);color:var(--ink)}
+  .actions svg{width:13px;height:13px;fill:currentColor;flex:none}
+  .qrrow{display:flex;align-items:center;gap:16px}
+  .qrbox{background:var(--white);padding:7px;border-radius:6px;flex:none;line-height:0}
+  .qrbox img{width:96px;height:96px;image-rendering:pixelated}
+  .qrtext .s1{font-size:10px;font-weight:800;letter-spacing:2px}
+  .qrtext .s2{font-size:11px;color:#9A9A9A;margin-top:4px}
+  .qrtext .s3{font-size:9px;letter-spacing:2px;color:var(--dgray);margin-top:12px;font-weight:600}
+  .foot{display:flex;justify-content:space-between;align-items:flex-end;
+    border-top:1px solid #232323;margin-top:18px;padding-top:12px}
+  .bars{display:flex;align-items:flex-end;gap:2px;height:18px}
+  .bars b{display:block;background:var(--white);width:2px;height:100%}
+  .bars b:nth-child(3n){width:4px}.bars b:nth-child(4n){height:100%;width:1px}
+  .foot small{font-size:8px;letter-spacing:2px;color:var(--dgray);font-weight:600}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="lens"></div>
+      <div class="micro"><span>PRODUCTION&nbsp;HOUSE</span><span class="rec"></span></div>
+      <h1>FRAMEX<span>ORIGINALS</span></h1>
+      <div class="rule"></div>
+      <div class="tagline">CAPTURE<i>&#9650;</i>CREATE<i>&#9650;</i>CRAFT</div>
+    </div>
+    <div class="dark">
+      <div class="actions">
+        <a href="tel:+917415900282">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          CALL</a>
+        <a href="mailto:framexoriginals@gmail.com">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          EMAIL</a>
+        <a href="https://framexoriginals.in" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7 9h-3a15 15 0 0 0-1.2-5.3A8 8 0 0 1 19 11zM12 4c.9 1.2 1.7 3.3 1.9 7h-3.8c.2-3.7 1-5.8 1.9-7zM5 13h3c.1 1.9.5 3.7 1.2 5.3A8 8 0 0 1 5 13zm3-2H5a8 8 0 0 1 4.2-5.3A15 15 0 0 0 8 11zm4 9c-.9-1.2-1.7-3.3-1.9-7h3.8c-.2 3.7-1 5.8-1.9 7zm2.8-1.7c.7-1.6 1.1-3.4 1.2-5.3h3a8 8 0 0 1-4.2 5.3z"/></svg>
+          WEBSITE</a>
+        <a href="https://www.instagram.com/framexoriginals" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.3-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.4 1.2-.1 1.6-.1 4.8-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a5 5 0 1 1 0 9.9 5 5 0 0 1 0-9.9zm0 1.8a3.1 3.1 0 1 0 0 6.3 3.1 3.1 0 0 0 0-6.3zm6.4-2.1a1.2 1.2 0 1 1-2.3 0 1.2 1.2 0 0 1 2.3 0z"/></svg>
+          INSTAGRAM</a>
+      </div>
+      <div class="qrrow">
+        <div class="qrbox">
+          <img alt="QR code — framexoriginals.in" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoCAIAAABqyz8vAAAEM0lEQVR4nO3dwW0kORAAwdPhLJD/Nq4LsxbwwQMLZEoR71FPqyfBR4Fgf30+n3+g5t/bNwD/h3BJEi5JwiVJuCQJlyThkiRckoRLknBJEi5JwiVJuCQJlyThkvTf7h98f39P3Mdxf/78ufK9q+ezup/d57n7f/3U38uKS5JwSRIuScIlSbgkCZck4ZK0PcddeW1ueurzu/PX6edw6nsrv9eKFZck4ZIkXJKES5JwSRIuScIl6dgcd+XU3O7U3HF3LntqTrz63tf21772e61YcUkSLknCJUm4JAmXJOGSJFySxue4FbfmqdNz35/KikuScEkSLknCJUm4JAmXJOGS9OvmuKfOVZie+946t6HCikuScEkSLknCJUm4JAmXJOGSND7HfW3uOD1/PXVO7a33k732e61YcUkSLknCJUm4JAmXJOGSJFySjs1xb80dd02/J2z3+tOfX6n8XitWXJKES5JwSRIuScIlSbgkCZekr8/nc/sennZqzrqrsi/2FisuScIlSbgkCZck4ZIkXJKES9L2ftzX9pvWz5F97T6n9/ue+n+tuCQJlyThkiRckoRLknBJEi5J4/txT50ve+s8gdfml/U596n7seKSJFyShEuScEkSLknCJUm4JI2/52zl1nm0t+ay0+fy3nLrnF0rLknCJUm4JAmXJOGSJFyShEvStTnuKdP7XF/z2n3e2gdsxSVJuCQJlyThkiRckoRLknBJOnY+7sr0+8BOfe/u56fv/7V57Wv7kq24JAmXJOGSJFyShEuScEkSLknbc9zpeef0/s7pufKp69+af58yff9WXJKES5JwSRIuScIlSbgkCZek7fecvfaerdeuX/n8yvR74059rxWXJOGSJFyShEuScEkSLknCJWl7jrsyPU89pTLXXJl+nq+dn7BixSVJuCQJlyThkiRckoRLknBJurYfd+WnXufW9afdmtNbcUkSLknCJUm4JAmXJOGSJFySju3HrXjtHIbK9VdunedgxSVJuCQJlyThkiRckoRLknBJ2n7PWX2f6PTc8dY8dfc6r513scuKS5JwSRIuScIlSbgkCZck4ZK0PcdduTUXvDVXnn4/2a19rhVWXJKES5JwSRIuScIlSbgkCZekY3PclelzZHdNz31fmyvfMj0/tuKSJFyShEuScEkSLknCJUm4JI3PcV+zO1+cfq/bqX26u+rnNlhxSRIuScIlSbgkCZck4ZIkXJJ+3Rz3tX2rK9PnJ5w6/2HXqetbcUkSLknCJUm4JAmXJOGSJFySxue4r53PemofbcWpuen0ecC7rLgkCZck4ZIkXJKES5JwSRIuSV+fz2frDyrzzun3hFWew65b5zbYj8uvIFyShEuScEkSLknCJUm4JG3PceEFVlyShEuScEkSLknCJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXpL8otI0I2HmExQAAAABJRU5ErkJggg==">
+        </div>
+        <div class="qrtext">
+          <div class="s1">SCAN TO VISIT</div>
+          <div class="s2">framexoriginals.in</div>
+          <div class="s3">PRE&nbsp;&nbsp;/&nbsp;&nbsp;PROD&nbsp;&nbsp;/&nbsp;&nbsp;POST</div>
+        </div>
+      </div>
+      <div class="foot">
+        <div class="bars"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        <small>FRX-ORG-2026&nbsp;&nbsp;©&nbsp;&nbsp;FRAMEX ORIGINALS</small>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
